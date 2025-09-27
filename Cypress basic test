@@ -1,0 +1,19 @@
+describe ('prueba de pagina', () => {
+
+    beforeEach(() => {
+        
+        cy.visit('https://buggy.justtestit.org')
+
+    
+    })
+
+    it('Validacion de datos', () => {
+
+        cy.get('.btn-success-outline').click()
+        cy.get('#username').type('gabrieltesto')
+        cy.get('.col-md-6 > form > :nth-child(2)').type('Gabrielito')
+        cy.get('#lastName').type('testiando')
+        cy.get('#password').type('Eldiablo1!')
+        cy.get('#confirmPassword').type('Eldiablo1!')
+        
+    })
